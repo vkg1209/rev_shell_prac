@@ -29,7 +29,7 @@ check_root(){
 }
 
 validate(){
-    if [ $1 -n 0 ]; then
+    if [ $1 -ne 0 ]; then
         echo -e "Installing $2 :: $R FAILURE $N"
         exit 1
     else
