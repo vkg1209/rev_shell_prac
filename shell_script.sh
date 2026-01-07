@@ -48,4 +48,4 @@ validate $? dfdf
 dnf install nginx -y &> $LOG_FILE
 validate $? nginx
 
-cat > $LOG_FILE
+cat $LOG_FILE
