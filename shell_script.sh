@@ -1,10 +1,13 @@
 #!/bin/bash
 
 START_TIME=$(date +%s)
+echo $START_TIME
 
 sleep 5
 sleep 2
 
 END_TIME=$(date +%s)
-TIME_TAKEN=$((START_TIME-END_TIME))
-echo $TIME_TAKEN
+echo $END_TIME
+
+TIME_TAKEN=$((END_TIME-START_TIME))
+echo $TIME_TAKEN Seconds
