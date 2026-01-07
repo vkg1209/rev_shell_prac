@@ -7,7 +7,7 @@ read -s PASSWORD
 
 if [ $PASSWORD == sex ]; then
     echo logged in successfully
-elif [ $PASSWORD != sexx ]; then
+elif [ $PASSWORD == sexx ]; then
     echo remove one x
 else 
     echo wrong password
