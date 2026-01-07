@@ -9,3 +9,5 @@ echo $$ : pid of this script
 sleep 5 &
 echo $! : pid of the last command in background
 echo $# : total number of arguments passed
+echo $LINENO : line number where error occured
+echo $bash_command : displays the command of which the error occured
