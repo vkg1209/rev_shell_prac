@@ -10,11 +10,12 @@ LOG_DIR_NAME=shellscript-logs
 LOG_FILE_NAME=$0.log
 LOG_FILE=/var/log/$LOG_DIR_NAME/$LOG_FILE_NAME
 
-rm $LOG_FILE
 
 if [ ! -d /var/log/$LOG_DIR_NAME ]; then
     mkdir /var/log/$LOG_DIR_NAME
 fi
+
+rm -r $LOG_FILE/*
 
 if [ ! -f /var/log/$LOG_DIR_NAME/$LOG_FILE_NAME ]; then
     touch /var/log/$LOG_DIR_NAME/$LOG_FILE_NAME
