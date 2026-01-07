@@ -15,7 +15,7 @@ if [ ! -d /var/log/$LOG_DIR_NAME ]; then
     mkdir /var/log/$LOG_DIR_NAME
 fi
 
-# rm -r $LOG_FILE
+> $LOG_FILE
 
 if [ ! -f /var/log/$LOG_DIR_NAME/$LOG_FILE_NAME ]; then
     touch /var/log/$LOG_DIR_NAME/$LOG_FILE_NAME
