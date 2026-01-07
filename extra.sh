@@ -1,5 +1,4 @@
 #!/bin/bash
 
-export USERNAME="vinayy"
 
 echo $USERNAME
