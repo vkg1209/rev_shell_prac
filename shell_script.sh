@@ -39,13 +39,13 @@ validate(){
 
 check_root
 
-dnf install mysql -y &> $LOG_FILE
+dnf install mysql -y &>> $LOG_FILE
 validate $? mysql
 
-dnf install dfdf &> $LOG_FILE
+dnf install dfdf &>> $LOG_FILE
 validate $? dfdf
 
-dnf install nginx -y &> $LOG_FILE
+dnf install nginx -y &>> $LOG_FILE
 validate $? nginx
 
 cat $LOG_FILE
