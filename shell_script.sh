@@ -28,24 +28,24 @@ check_root(){
     fi
 }
 
+install_packages(){
+    for package in $1
+    do
+        dnf install $package -y &>> $LOG_FILE
+        validate($? $package)
+    done
+}
+
 validate(){
     if [ $1 -ne 0 ]; then
         echo -e "Installing $2 :: $R FAILURE $N"
-        # exit
+        exit 1
     else
         echo -e "Installing $2 :: $G SUCCESS $N"
     fi
 }
 
 check_root
-
-dnf install mysql -y &>> $LOG_FILE
-validate $? mysql
-
-dnf install dfdf &>> $LOG_FILE
-validate $? dfdf
-
-dnf install nginx -y &>> $LOG_FILE
-validate $? nginx
+install_packages $@
 
 cat $LOG_FILE
