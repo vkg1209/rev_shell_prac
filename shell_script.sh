@@ -1,10 +1,14 @@
 #!/bin/bash
 
-WORLD_LEADERS=(MODI TRUMP PUTIN XIJINPING)
-echo ${WORLD_LEADERS[@]}
+USERNAME=vinay
 
-WORLD_LEADERS=(MODI TRUMP PUTIN XI JINPING)
-echo ${WORLD_LEADERS[3]}
+echo Enter Password $USERNAME: 
+read -s PASSWORD
 
-WORLD_LEADERS=("MODI" "TRUMP" "PUTIN" "XI JINPING")
-echo ${WORLD_LEADERS[3]}
+if ( $PASSWORD -eq sex ); then
+    echo logged in successfully
+elif ( $PASSWORD -ne sexx ); then
+    echo remove one x
+else 
+    echo wrong password
+fi
