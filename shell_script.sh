@@ -50,6 +50,6 @@ validate(){
 }
 
 check_root
-install_packages
+install_packages $@
 
 cat $LOG_FILE
