@@ -1,18 +1,34 @@
 #!/bin/bash
 
-#checking user has a root access
-USER_ID=$(id -u)
+R="\e[31m"
+G="\e[32m"
+Y="\e[33m"
+N="\e[0m"
 
-if [ $USER_ID -ne 0 ]; then
-    echo "Please run this script with root privileges"
-    exit 1
-fi
+
+check_root(){
+
+    USER_ID=$(id -u)
+
+    if [ $USER_ID -ne 0 ]; then
+        echo -e "You need $R ROOT PRIVILAGES $N to run this script"
+        exit 1
+    fi
+}
+
+validate(){
+    if [ $1 -n 0 ]; then
+        echo -e "Installing $2 :: $R FAILURE $N"
+        exit 1
+    else
+        echo -e "Installing $2 :: $G SUCCESS $N"
+    fi
+}
+
+check_root
 
 dnf install mysql -y
+validate $? mysql
 
-if [ $? -eq 0 ]; then
-    echo "mysql installed successfully : SUCCESS"
-else
-    echo "installing mysql is a failure: FAILURE"
-    exit 1
-fi
+dnf install nginx -y
+validate $? nginx
