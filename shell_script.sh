@@ -31,7 +31,7 @@ check_root(){
 install_packages(){
     for package in $1
     do
-        dnf install $package -y &>> $LOG_FILE
+        dnf install $package -y & >> $LOG_FILE
         validate $? $package
     done
 }
