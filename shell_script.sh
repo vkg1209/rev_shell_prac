@@ -32,7 +32,7 @@ install_packages(){
     for package in $1
     do
         dnf install $package -y &>> $LOG_FILE
-        validate($? $package)
+        validate $? $package
     done
 }
 
