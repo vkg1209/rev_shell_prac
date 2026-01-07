@@ -3,6 +3,6 @@
 student_name=vinay
 student_id=54
 
-echo $student_name
-echo ${student_name}
-echo "$student_name : $student_id"
+echo $1
+echo ${2}
+echo "$1 : $2"
