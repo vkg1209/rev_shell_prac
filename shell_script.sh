@@ -5,6 +5,7 @@ echo $* : all variables
 echo $0 : script name
 echo $PWD : present working directory
 echo  $USER : current user
+echo $HOME : home directory of the user
 echo $$ : pid of this script
 sleep 5 &
 echo $! : pid of the last command in background
