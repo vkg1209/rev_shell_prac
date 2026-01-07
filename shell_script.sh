@@ -14,3 +14,4 @@ if [ $? -eq 0 ]; then
 else
     echo "installing mysql is a failure: FAILURE"
     exit 1
+fi
