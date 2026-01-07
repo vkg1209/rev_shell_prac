@@ -32,7 +32,7 @@ check_root(){
 }
 
 install_packages(){
-    for package in $1
+    for package in $@
     do
         dnf install $package -y &>> $LOG_FILE
         validate $? $package
@@ -49,6 +49,6 @@ validate(){
 }
 
 check_root
-install_packages $@
+install_packages
 
 cat $LOG_FILE
