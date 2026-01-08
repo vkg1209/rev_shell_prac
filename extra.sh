@@ -1,7 +1,7 @@
 #!/bin/bash
 
 touch data.txt
-DATA=vinay
+DATA=''
 
 if [ -z data.txt ]; then
     echo file is empty
