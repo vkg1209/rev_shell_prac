@@ -1,4 +1,4 @@
 #!/bin/bash
 
 
-trap 'echo copied' SIGNINT
+trap 'echo copied' SIGINT
