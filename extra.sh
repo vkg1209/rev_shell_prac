@@ -10,7 +10,7 @@ ALL_LOG_PATHS=$(find /home/ec2-user -name "*.log")
 
 while IFS= read -r filepath 
 do
-    $N=$(($N++))
+    $N=$(($N + 1))
     $N > $filepath
     echo "-------------------------------------------------------------"
 done <<< $ALL_LOG_PATHS
