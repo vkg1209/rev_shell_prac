@@ -12,5 +12,5 @@ while IFS= read -r filepath
 do
     echo $filepath
     echo "-------------------------------------------------------------"
-done
+done <<< $ALL_LOG_PATHS
 
