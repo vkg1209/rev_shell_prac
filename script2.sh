@@ -7,3 +7,5 @@ if [ $PASSWORD = '' ]; then
 else
     echo $PASSWORD
 fi
+
+trap 'echo we got error because it cant read password variable from scrip1' ERR
