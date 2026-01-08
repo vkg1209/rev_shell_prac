@@ -1,6 +1,7 @@
 #!/bin/bash
 
 touch data.txt
+'' > data.txt
 DATA=''
 
 if [ -z data.txt ]; then
