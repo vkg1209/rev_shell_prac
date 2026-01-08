@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 echo this is script2
 trap 'echo we got error because it cant read password variable from scrip1' ERR

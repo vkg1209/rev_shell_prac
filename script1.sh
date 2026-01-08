@@ -1,4 +1,4 @@
-#!bin/bash
+#!/bin/bash
 
 PASSWORD=this_is_script1_password
 
